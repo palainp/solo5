@@ -51,5 +51,6 @@ __attribute__((always_inline)) static inline void crt_init_ssp(void)
 
 __attribute__((always_inline)) static inline void crt_init_tls(void)
 {
-    (void)platform_set_tls_base(0);
+//    (void)platform_set_tls_base(0);
+    (void);
 }
