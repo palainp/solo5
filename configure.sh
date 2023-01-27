@@ -463,8 +463,8 @@ case ${CONFIG_HOST} in
         TARGET_OBJCOPY="${TARGET_OBJCOPY:-objcopy}"
         # [LLD] OpenBSD's LLD needs to be explicitly told not to produce PIE
         # executables.
-        TARGET_CC_LDFLAGS="-Wl,-nopie"
-        TARGET_LD_LDFLAGS="-nopie"
+        TARGET_CC_LDFLAGS="-Wl,-nopie,-femulated-tls"
+        TARGET_LD_LDFLAGS="-nopie -femulated-tls"
         ;;
     *)
         die "Unsupported host system: ${CONFIG_HOST}"

@@ -27,23 +27,6 @@
  * the context of Solo5 means at all.
  */
 
-
-
-/*
- * OpenBSD clang toolchains have unspecified non-support for TLS.
- *
- * In that case just compile a dummy and disable this test in tests.bats.
- * XXX: Is it possible to fix the linker scripts?
- */
-#if defined(__OpenBSD__)
-
-int solo5_app_main(const struct solo5_start_info *si __attribute__((unused)))
-{
-    return SOLO5_EXIT_FAILURE;
-}
-
-#else
-
 #if defined(__x86_64__) || defined(__powerpc64__)
 /* Variant II */
 struct tcb {
@@ -117,5 +100,3 @@ int solo5_app_main(const struct solo5_start_info *si __attribute__((unused)))
     puts("SUCCESS\n");
     return SOLO5_EXIT_SUCCESS;
 }
-
-#endif /* defined(__OpenBSD__) */
