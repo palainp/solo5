@@ -50,6 +50,7 @@ spt_SRCS := spt/start.c \
     spt/sys_linux_$(CONFIG_TARGET_ARCH).c
 
 virtio_SRCS := virtio/boot.S virtio/start.c $(common_SRCS) \
+    virtio/vga.c \
     virtio/platform.c virtio/platform_intr.c \
     virtio/pci.c virtio/serial.c virtio/time.c virtio/virtio_ring.c \
     virtio/virtio_net.c virtio/virtio_blk.c virtio/tscclock.c \

@@ -36,6 +36,10 @@
 void serial_init(void);
 void serial_putc(char a);
 
+/* vga.c: VGA output */
+void vga_clear();
+void vga_putc(char a);
+
 void time_init(void);
 
 /* pvclock.c: KVM paravirtualized clock */
