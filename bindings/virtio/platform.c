@@ -119,8 +119,10 @@ int platform_puts(const char *buf, int n)
 {
     int i;
 
-    for (i = 0; i < n; i++)
+    for (i = 0; i < n; i++) {
         serial_putc(buf[i]);
+        vga_putc(buf[i]);
+    }
 
     return n;
 }
