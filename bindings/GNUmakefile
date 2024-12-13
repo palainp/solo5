@@ -51,6 +51,7 @@ spt_SRCS := spt/start.c \
 
 virtio_SRCS := virtio/boot.S virtio/start.c $(common_SRCS) \
     virtio/platform.c virtio/platform_intr.c \
+    virtio/vga.c \
     virtio/pci.c virtio/serial.c virtio/time.c virtio/virtio_ring.c \
     virtio/virtio_net.c virtio/virtio_blk.c virtio/tscclock.c \
     virtio/clock_subr.c virtio/pvclock.c 

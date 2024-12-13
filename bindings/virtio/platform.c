@@ -26,6 +26,7 @@ static char cmdline[8192];
 #define PLATFORM_MAX_MEM_SIZE 0x40000000
 
 static uint64_t mem_size;
+void vga_putc(char c);
 
 void platform_init(const void *arg)
 {
@@ -119,8 +120,10 @@ int platform_puts(const char *buf, int n)
 {
     int i;
 
-    for (i = 0; i < n; i++)
+    for (i = 0; i < n; i++) {
         serial_putc(buf[i]);
+        vga_putc(buf[i]);
+    }
 
     return n;
 }
