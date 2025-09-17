@@ -1,3 +1,13 @@
+## v0.9.2 (2025-07-15)
+
+- Send FPU info to GDB in HVT server (@greydot, #571)
+- Support of OpenBSD 7.5 (@shym, @adamsteen, @omegametabroccolo, #573)
+
+## v0.9.1 (2025-03-06)
+
+* Fetch `stdalign.h` from system on FreeBSD (#590, @shym, @dinosaure)
+* Fix the documentation about clocks (sorry for my french) by @dinosaure in #591
+
 ## v0.9.0 (2024-10-11)
 
 * Fetch `stdadomic.h` from system on FreeBSD (#574, @shym, @hannesm)
